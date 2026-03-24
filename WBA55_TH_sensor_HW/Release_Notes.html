@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Release Notes for WBA55_TH_sensor Hardware Design</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="_htmresc/mini-st_2020.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/x-icon" href="_htmresc/favicon.png" />
+</head>
+<body>
+<div class="row">
+<div class="col-sm-12 col-lg-4">
+<center>
+<h1 id="release-notes-for">Release Notes for</h1>
+<h1 id="WBA55_TH_sensor_HW">
+  <mark>WBA55_TH_sensor Hardware Design (KiCad)</mark>
+</h1>
+<p>Copyright © 2026 STMicroelectronics<br />
+</p>
+<a href="https://www.st.com" class="logo">
+  <img src="_htmresc/st_logo_2020.png" alt="ST logo" />
+</a>
+</center>
+
+<h1 id="purpose">Purpose</h1>
+<p>
+The <strong>WBA55_TH_sensor</strong> hardware design provides a reference
+sensor board based on the <strong>STM32WBA55</strong> MCU and the
+<strong>SHT40AD1B</strong> temperature and humidity sensor.
+It is intended to be used together with the
+<strong>BLE_HealthThermometer Application with SHT40AD1B sensor</strong>
+firmware running on STM32WBA55.
+</p>
+
+<p>
+This design has been created using the <strong>KiCad</strong> EDA toolchain and
+is provided as an example of hardware integration of STM32WBA55 with
+a digital temperature and humidity sensor and basic supporting circuitry
+(power supply, connectors, debugging interface, etc.).
+</p>
+
+<p>
+<strong>The WBA55_TH_sensor hardware design is being delivered as-is, not necessarily supported by ST.</strong>
+</p>
+
+</div>
+<div class="col-sm-12 col-lg-8">
+<h1 id="update-history">Update History</h1>
+
+<div class="collapse">
+<input type="checkbox" id="collapse-section17" checked aria-hidden="true" />
+<label for="collapse-section17" aria-hidden="true">V1.0.0 / 20-March-2026</label>
+<div>
+
+<h2 id="main-changes">Main Changes</h2>
+<h3 id="main-changes_content">
+Initial release of the <strong>WBA55_TH_sensor</strong> hardware design
+for <strong>STM32WBA55</strong> with <strong>SHT40AD1B</strong> sensor.
+</h3>
+
+<h2 id="hardware-overview">Hardware Overview</h2>
+<ul>
+  <li>
+    <h3>MCU</h3>
+    <p>STM32WBA55 series ultra-low-power wireless microcontroller.</p>
+  </li>
+  <li>
+    <h3>Sensor</h3>
+    <p>SHT40AD1B temperature and humidity sensor (I<sup>2</sup>C interface).</p>
+  </li>
+  <li>
+    <h3>Power</h3>
+    <p>Board powered from CR2032 battery or external power source (as defined in schematic).</p>
+  </li>
+  <li>
+    <h3>Connectivity</h3>
+    <p>Connectivity is defined by STM32WBA55 capabilities - Bluetooth® Low Energy 802.15.4. Design was tuned and tested for Bluetooth® Low Energy and transmitt power 0 dBm.</p>
+  </li>
+</ul>
+
+<h2 id="components-and-documents">Components and Documentation</h2>
+<h3 id="components-and-documents_content">
+The hardware folder contains:
+</h3>
+<ul>
+  <li>KiCad schematic file(s) (<code>*.kicad_sch</code>).</li>
+  <li>KiCad PCB layout file(s) (<code>*.kicad_pcb</code>).</li>
+  <li>PDF Documentation (schematic and layout PDF).</li>
+  <li>Gerber outputs, BOM and parts position file.</li>
+</ul>
+
+<h2 id="known-limitations">Known Limitations</h2>
+<h3 id="known-limitations_content">None</h3>
+
+<h2 id="design-and-eda-tool">Design and EDA Tool</h2>
+<ul>
+  <li>
+    <h3>KiCad EDA</h3>
+    <p>
+      Design created and checked with:
+      <br />KiCad version <strong>9.0.0</strong>.
+    </p>
+  </li>
+</ul>
+
+<h2 id="dependencies">Dependencies</h2>
+<h3 id="dependencies_content">
+This hardware design is intended for use with:
+</h3>
+<ul>
+  <li>
+    <strong> Board functionality was verified using BLE_HealthThermometer Application with SHT40AD1B sensor</strong> firmware example,
+    based on the
+    <a href="https://github.com/STMicroelectronics/STM32CubeWBA/tree/v1.9.0">
+      STM32CubeWBA_v1.9.0
+    </a>
+    package.
+  </li>
+  <li>
+    Users should refer to the firmware release notes and STM32CubeWBA documentation
+    for software dependencies, middleware versions and license terms.
+  </li>
+</ul>
+
+<h2 id="licensing">Licensing</h2>
+<h3 id="licensing_content">
+The WBA55_TH_sensor hardware design files (KiCad project, schematic and PCB files)
+are provided under the terms specified in the repository <code>LICENSE</code> file.
+</h3>
+<p>
+Third-party components and trademarks (including but not limited to
+STM32WBA55, NUCLEO-WBA55CG and SHT40AD1B) remain the property of their
+respective owners. For details on software and middleware licenses related
+to the STM32WBA ecosystem, refer to the STM32CubeWBA package and associated
+license documents.
+</p>
+
+</div> <!-- end collapse content -->
+</div> <!-- end collapse -->
+</div> <!-- end col -->
+</div> <!-- end row -->
+
+<footer class="sticky">
+<p>
+For complete documentation on STM32WBAxx, visit:
+[<a href="http://www.st.com/stm32wba">www.st.com/stm32wba</a>]
+</p>
+<em>
+This release note uses up to date web standards and, for this reason,
+should not be opened with Internet Explorer but preferably with popular
+browsers such as Google Chrome, Mozilla Firefox, Opera or Microsoft Edge.
+</em>
+</footer>
+</body>
+</html>

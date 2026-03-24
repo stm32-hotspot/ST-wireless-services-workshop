@@ -1,0 +1,111 @@
+########################################
+# 1) OS / General
+########################################
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Misc archives / data
+*.csv
+*.ipc
+*.pos
+
+
+########################################
+# 2) KiCad (hardware) – WBA55_TH_sensor_HW
+########################################
+
+# KiCad backup, autosave, and lock files
+*~
+*.bak
+*.bck
+*.tmp
+*.kicad_sch-bak
+*.kicad_pcb-bak
+_autosave-*
+
+# Temporary lock files created by KiCad
+~*.kicad_pcb.lck
+~*.kicad_sch.lck
+
+# KiCad cache and info files
+fp-info-cache
+fp-lib-table
+sym-lib-table
+
+# KiCad project files (KEEP these, so they are NOT ignored)
+# (no ignore rule, they will be tracked by default)
+# *.kicad_pro
+# *.kicad_pcb
+# *.kicad_sch
+
+# Gerber and plot outputs (optional)
+plots/
+doc/*.gbr
+doc/*.gbrjob
+doc/*.pdf
+production/
+fabrication-toolkit-options.json
+
+# KiCad backup folders (optional)
+complex_hierarchy-backups/
+WB55_module_dongle-backups/
+WBA6_dongle-backups/
+
+
+########################################
+# 3) STM32 / Firmware – WBA55_TH_sensor_FW
+########################################
+
+# Build / output folders (adjust names to your project)
+Debug/
+Release/
+build/
+out/
+
+# STM32CubeIDE project local metadata and temporary files
+.settings/
+.ipch/
+*.launch
+
+# STM32CubeMX generated backup / logs (if any)
+*.bak-*
+*.log
+
+# If you sometimes export .elf/.hex/.bin in source tree
+*.elf
+*.hex
+*.bin
+
+########################################
+# 4) Files we always want to keep/tracked
+########################################
+
+# Keep Git config
+!.gitignore
+!.gitattributes
+
+# Keep documentation
+!*.md
+!*.html
+!_htmresc/*
+
+# Keep source files (firmware)
+!*.c
+!*.h
+!*.s
+!**/*.c
+!**/*.h
+!**/*.s
+
+# Keep CubeMX project files
+!*.ioc
+!*.mxproject
+
+# Keep CubeIDE project files (project descriptors)
+!*.project
+!*.cproject
+
+# If you have a dedicated folder for STM32CubeIDE project
+!STM32CubeIDE/**
